@@ -14,11 +14,9 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install dependencies
-        run: |
-          pip install pandas==2.0.3 yfinance requests
-          pip install git+https://github.com/twopirllc/pandas-ta.git@main
+        run: pip install yfinance pandas requests
       - name: Run script
-        run: python main.py
         env:
           LINE_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: python main.py
