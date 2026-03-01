@@ -17,8 +17,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install yfinance requests pandas
-      - name: Run script
+      - name: Run scripts
         env:
           LINE_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
-        run: python main.py
+        run: |
+          python main.py
+          python moomoo.py
