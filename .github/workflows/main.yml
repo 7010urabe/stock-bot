@@ -25,3 +25,4 @@ jobs:
         run: |
           python main.py
           python moomoo.py
+          python volume.py
