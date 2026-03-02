@@ -2,7 +2,8 @@ name: StockCheckBot
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    # 日本時間 15:08 (世界標準時 06:08) に実行予約
+    - cron: '8 6 * * *'
   workflow_dispatch:
 
 jobs:
