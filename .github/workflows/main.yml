@@ -2,9 +2,10 @@ name: StockCheckBot
 
 on:
   schedule:
-    # 日本時間 15:08 (世界標準時 06:08) に実行予約
-    - cron: '8 6 * * *'
-  workflow_dispatch:
+    # 日本時間 15:08 (世界標準時 06:08)
+    # 末尾の '1-5' が「月曜(1)から金曜(5)」という意味です
+    - cron: '8 6 * * 1-5'
+  workflow_dispatch:  
 
 jobs:
   build:
